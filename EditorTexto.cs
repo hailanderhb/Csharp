@@ -3,7 +3,7 @@ using System.IO;
 
 namespace EditorTexto
 {
-    class EditorTexto
+    class Program
     {
         static void Main(string[] args)
         {
