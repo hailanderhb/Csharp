@@ -21,7 +21,7 @@ namespace mediaAlunos
 
             media = soma / 5;
             Console.WriteLine($"A média dos 5 alunos é de {media}");
-            Console.ReadLine();
+            Console.ReadKey();
         }
     }
 }
