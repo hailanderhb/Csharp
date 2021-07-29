@@ -42,7 +42,8 @@ namespace BaltaDataAccess
 
                 ListCategories(connection);
                 //CreateCategory(connection);
-                UpdateCategory(connection);
+                //UpdateCategory(connection);
+                //DeleteCategory(connection);
 
 
 
@@ -107,6 +108,16 @@ namespace BaltaDataAccess
             });
             Console.WriteLine($"{rows} registros atualizados");
 
+        }
+
+        static void DeleteCategory(SqlConnection connection)
+        {
+            var deleteCategory = "DELETE [Category] WHERE [Id]=@id";
+            var rows = connection.Execute(deleteCategory, new
+            {
+                id = new Guid("4e2925c0-3755-430f-b998-ed1156e60e82")
+            });
+            Console.WriteLine($"{rows} registros excluídos");
         }
     }
 
